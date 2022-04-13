@@ -1,20 +1,17 @@
 #include<iostream>
-#include<map>
 using namespace std;
 int diffrenceequaltok(int arr[],int n,int key)
 {
-    map<int,int> m;
     int count=0;
-    for (int i=0;i<n;i++)
+    for (int i=0;i<n-1;i++)
     {
-        m[arr[i]]=i;
+        for (int j=i+1;j<n;j++)
+        {
+            if (abs(arr[i]-arr[j])==key)
+              count++;
+        }
     }
-    for (int i=0;i<n;i++)
-    {
-        if (m.find(arr[i]+key)!=m.end())
-           count++;
-    }
-
+   
     return count; 
 
 }
