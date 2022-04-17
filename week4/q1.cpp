@@ -63,6 +63,7 @@ int main()
            
         cout<<endl<<"Inversions:"<<inv<<endl;
         cout<<"Comparisions:"<<comp<<endl;
+        comp=0;
     }
     return 0;
 }
